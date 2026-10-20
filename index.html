@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Accent Colour Study · The Postpartum Suite</title>
+<meta name="color-scheme" content="light only" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Montserrat:wght@400;500;600&family=Karla:wght@400;500&display=swap" />
+<style>
+  :root {
+    --canvas: #F3EFEC; --ink: #0A0A0A; --ink-soft: #2C2C2C; --ink-mute: #5A524F;
+    --hair: rgba(10, 10, 10, .12); --gutter: 24px;
+  }
+  @media (min-width: 900px) { :root { --gutter: 48px; } }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--canvas); color: var(--ink-soft); font-family: Karla, system-ui, sans-serif; line-height: 1.6; }
+  img { display: block; max-width: 100%; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 var(--gutter); }
+
+  header.top { padding: clamp(56px, 10vh, 112px) 0 clamp(32px, 6vh, 64px); text-align: center; }
+  .top h1 { margin: 0; font-family: "Instrument Serif", Georgia, serif; font-weight: 400; text-transform: uppercase; font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: 1; color: var(--ink); }
+  .top p { max-width: 60ch; margin: 1.2rem auto 0; font-size: clamp(1rem, .95rem + .3vw, 1.15rem); }
+
+  nav.jump { position: sticky; top: 0; z-index: 5; background: rgba(243, 239, 236, .88); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--hair); }
+  nav.jump ul { list-style: none; margin: 0 auto; padding: 12px var(--gutter); max-width: 1280px; display: flex; gap: 10px; overflow-x: auto; scrollbar-width: none; }
+  nav.jump ul::-webkit-scrollbar { display: none; }
+  nav.jump a { display: flex; align-items: center; gap: 8px; white-space: nowrap; padding: 7px 14px 7px 8px; border: 1px solid var(--hair); border-radius: 999px; font-family: Montserrat, sans-serif; font-size: .74rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+  nav.jump a:hover { background: #fff; }
+  .dot { width: 14px; height: 14px; border-radius: 50%; flex: none; }
+
+  .view { display: flex; justify-content: center; gap: 6px; margin: 28px 0 0; }
+  .view button { font: 500 .74rem Montserrat, sans-serif; letter-spacing: .1em; text-transform: uppercase; padding: 9px 18px; border-radius: 8px; border: 1px solid var(--hair); background: transparent; color: var(--ink); cursor: pointer; }
+  .view button[aria-pressed="true"] { background: var(--ink); color: var(--canvas); border-color: var(--ink); }
+
+  section.pal { padding: clamp(56px, 9vh, 96px) 0; border-top: 1px solid var(--hair); scroll-margin-top: 60px; }
+  .pal__head { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; margin-bottom: 32px; }
+  @media (min-width: 900px) { .pal__head { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: end; gap: 48px; } }
+  .pal__num { font-family: Montserrat, sans-serif; font-size: .72rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-mute); margin: 0 0 .5rem; }
+  .pal h2 { margin: 0; font-family: "Instrument Serif", Georgia, serif; font-weight: 400; text-transform: uppercase; font-size: clamp(2.2rem, 4.6vw, 3.6rem); line-height: 1; color: var(--ink); }
+  .pal__desc { margin: 0; max-width: 58ch; font-size: clamp(1rem, .96rem + .2vw, 1.1rem); }
+  .chips { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+  .chip { display: flex; align-items: center; gap: 8px; font-family: Montserrat, sans-serif; font-size: .7rem; letter-spacing: .06em; color: var(--ink-mute); }
+  .chip i { width: 26px; height: 26px; border-radius: 6px; display: block; }
+
+  .shots { display: grid; gap: 20px; }
+  .shots--desk { grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 900px) { .shots--desk { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .shots--phone { grid-template-columns: repeat(2, minmax(0, 260px)); justify-content: center; gap: 24px; }
+  figure { margin: 0; }
+  figure img { width: 100%; border-radius: 10px; border: 1px solid var(--hair); background: #e9e3df; }
+  figcaption { margin-top: 10px; font-family: Montserrat, sans-serif; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-mute); text-align: center; }
+  body[data-view="desktop"] .shots--phone, body[data-view="phone"] .shots--desk { display: none; }
+
+  footer { padding: 64px 0 88px; text-align: center; font-size: .9rem; color: var(--ink-mute); border-top: 1px solid var(--hair); }
+</style>
+</head>
+<body data-view="desktop">
+
+<header class="top wrap">
+  <h1>Accent Colour Study</h1>
+  <p>The cream, the blush and the black stay exactly as they are. Only the accent changes: the Enquire button, the script lines and the soft colour in the background. Each option is shown on two real sections of the site.</p>
+  <div class="view" role="group" aria-label="Show">
+    <button type="button" data-view-btn="desktop" aria-pressed="true">Desktop</button>
+    <button type="button" data-view-btn="phone" aria-pressed="false">Phone</button>
+  </div>
+</header>
+
+<nav class="jump" aria-label="Palettes">
+  <ul id="jump"></ul>
+</nav>
+
+<main id="palettes"></main>
+
+<footer class="wrap">The Postpartum Suite · accent colour study · October 2026</footer>
+
+<script>
+  var PALETTES = [
+    { id: 'current', name: 'Coral', label: 'Current', hex: ['#A64C45', '#C86D58', '#8C362F'],
+      desc: 'The colour on the site today, for comparison. Warm, confident and noticeable.' },
+    { id: 'sage', name: 'Sage', label: 'Option one', hex: ['#5E6F5A', '#8FA08A', '#4A5947'],
+      desc: 'A deep eucalyptus green. Calm and restorative, it reads as care rather than commerce, and echoes the green walls in real homes.' },
+    { id: 'mulberry', name: 'Mulberry', label: 'Option two', hex: ['#6B3F4E', '#9A6676', '#55303D'],
+      desc: 'A dusty plum. Still in the rose family, so it sits naturally with the blush, but deeper and more grown up than coral.' },
+    { id: 'clay', name: 'Clay', label: 'Option three', hex: ['#B8705A', '#D0937E', '#995843'],
+      desc: 'A soft terracotta. A gentler, more earthy cousin of the current coral, with less red in it.' },
+    { id: 'ink', name: 'Ink Blue', label: 'Option four', hex: ['#2F3E55', '#6F7E96', '#233044'],
+      desc: 'A muted navy. Trust and discretion, like a boutique clinic. The biggest change of mood, with a cool mist in the background.' },
+    { id: 'bronze', name: 'Bronze', label: 'Option five', hex: ['#9A7B4F', '#C2A57A', '#7D633D'],
+      desc: 'An antique gold. The feel of a luxury hotel, beautiful on the script lines and in the background glow.' },
+    { id: 'none', name: 'No Accent', label: 'Option six', hex: ['#0A0A0A', '#D7C2C9', '#2C2C2C'],
+      desc: 'Black buttons and black script, with only blush in the background. The quietest, most understated version.' }
+  ];
+  var main = document.getElementById('palettes'), jump = document.getElementById('jump');
+  PALETTES.forEach(function (p) {
+    var li = document.createElement('li');
+    li.innerHTML = '<a href="#' + p.id + '"><span class="dot" style="background:' + p.hex[0] + '"></span>' + p.name + '</a>';
+    jump.appendChild(li);
+    var s = document.createElement('section');
+    s.className = 'pal'; s.id = p.id;
+    var img = function (scene, w, cap) {
+      return '<figure><img src="img/' + scene + '-' + p.id + '-' + w + '.jpg" alt="' + cap + ', ' + p.name + ' accent" loading="lazy" decoding="async" /><figcaption>' + cap + '</figcaption></figure>';
+    };
+    s.innerHTML =
+      '<div class="wrap">' +
+        '<div class="pal__head">' +
+          '<div><p class="pal__num">' + p.label + '</p><h2>' + p.name + '</h2>' +
+            '<div class="chips">' + p.hex.map(function (h) { return '<span class="chip"><i style="background:' + h + '"></i>' + h + '</span>'; }).join('') + '</div></div>' +
+          '<p class="pal__desc">' + p.desc + '</p>' +
+        '</div>' +
+        '<div class="shots shots--desk">' + img('home', 1440, 'Home') + img('who', 1440, 'Who Comes Into Your Home') + '</div>' +
+        '<div class="shots shots--phone">' + img('home', 390, 'Home') + img('who', 390, 'Who Comes Into Your Home') + '</div>' +
+      '</div>';
+    main.appendChild(s);
+  });
+  [].forEach.call(document.querySelectorAll('[data-view-btn]'), function (b) {
+    b.addEventListener('click', function () {
+      document.body.setAttribute('data-view', b.getAttribute('data-view-btn'));
+      [].forEach.call(document.querySelectorAll('[data-view-btn]'), function (o) { o.setAttribute('aria-pressed', String(o === b)); });
+    });
+  });
+</script>
+</body>
+</html>
