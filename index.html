@@ -56,6 +56,9 @@
   body[data-view="desktop"] .shots--phone, body[data-view="phone"] .shots--desk { display: none; }
 
   figure img { cursor: zoom-in; }
+  .full { display: inline-block; margin-top: 18px; padding: 12px 20px; border-radius: 8px; background: #5E6F5A; color: #F3EFEC; text-decoration: none; font: 500 .74rem Montserrat, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+  .full:hover { background: #4A5947; }
+  .top .full { margin-top: 22px; }
 
   /* Full screen view: tap an image, Back (or Esc, or Close) returns to the page.
      The arrows step through the options on the same section. */
@@ -77,6 +80,7 @@
 <header class="top wrap">
   <h1>Accent Colour Study</h1>
   <p>The cream, the blush and the black stay exactly as they are. Only the accent changes: the Enquire button, the script lines and the soft colour in the background. Each option is shown on two real sections of the site.</p>
+  <a class="full" href="what-we-do-sage/">New: the whole What We Do page in Sage &#8250;</a>
   <div class="view" role="group" aria-label="Show">
     <button type="button" data-view-btn="desktop" aria-pressed="true">Desktop</button>
     <button type="button" data-view-btn="phone" aria-pressed="false">Phone</button>
@@ -105,7 +109,7 @@
   var PALETTES = [
     { id: 'current', name: 'Coral', label: 'Current', hex: ['#A64C45', '#C86D58', '#8C362F'],
       desc: 'The colour on the site today, for comparison. Warm, confident and noticeable.' },
-    { id: 'sage', name: 'Sage', label: 'Option one', hex: ['#5E6F5A', '#8FA08A', '#4A5947'],
+    { id: 'sage', name: 'Sage', label: 'Option one', full: 'what-we-do-sage/', hex: ['#5E6F5A', '#8FA08A', '#4A5947'],
       desc: 'A deep eucalyptus green. Calm and restorative, it reads as care rather than commerce, and echoes the green walls in real homes.' },
     { id: 'mulberry', name: 'Mulberry', label: 'Option two', hex: ['#6B3F4E', '#9A6676', '#55303D'],
       desc: 'A dusty plum. Still in the rose family, so it sits naturally with the blush, but deeper and more grown up than coral.' },
@@ -133,7 +137,7 @@
         '<div class="pal__head">' +
           '<div><p class="pal__num">' + p.label + '</p><h2>' + p.name + '</h2>' +
             '<div class="chips">' + p.hex.map(function (h) { return '<span class="chip"><i style="background:' + h + '"></i>' + h + '</span>'; }).join('') + '</div></div>' +
-          '<p class="pal__desc">' + p.desc + '</p>' +
+          '<div><p class="pal__desc">' + p.desc + '</p>' + (p.full ? '<a class="full" href="' + p.full + '">See the whole What We Do page in ' + p.name + ' &#8250;</a>' : '') + '</div>' +
         '</div>' +
         '<div class="shots shots--desk">' + img('home', 1440, 'Home') + img('who', 1440, 'Who Comes Into Your Home') + '</div>' +
         '<div class="shots shots--phone">' + img('home', 390, 'Home') + img('who', 390, 'Who Comes Into Your Home') + '</div>' +

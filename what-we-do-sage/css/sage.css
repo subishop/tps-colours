@@ -1,0 +1,22 @@
+/* Sage accent mock up (20 Oct 2026): the coral tier swapped for sage.
+   Canvas, blush, rose mist and ink are unchanged. */
+:root {
+  --coral-mid:  #8FA08A;
+  --coral-deep: #74866F;
+  --ember:      #5E6F5A;
+  --ember-deep: #4A5947;
+}
+/* The two places that set coral directly rather than through the tokens. */
+.vt { --vt-a1: #8FA08A; --vt-b2: #74866F; }
+.page--faqs { --fw-a1: #8FA08A; --fw-b2: #74866F; }
+
+/* Way back to the colour study. */
+.study-back {
+  position: fixed; left: 16px; bottom: 16px; z-index: 9999;
+  padding: 10px 16px; border-radius: 999px;
+  background: rgba(243, 239, 236, .82);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border: 1px solid rgba(10, 10, 10, .12);
+  font: 500 .72rem Montserrat, sans-serif; letter-spacing: .1em; text-transform: uppercase;
+  color: #0A0A0A; text-decoration: none;
+}
